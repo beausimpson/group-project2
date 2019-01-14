@@ -33,8 +33,20 @@ if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
 
+// dev vs prod sequelize code
+//setup dev environment
+var isDev = process.env.NODE_ENV.trim() === "development";
+if (isDev) {
+  //checks to see whether we set our node environment to development
+  require("dotenv").config(); //grab local copy of env vars
+}
+
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
+
+// dev vs prod sequelize code
+//start server
+db.sequelize.sync({ force: isDev }).then(function() {
+  //will only force sync if isDev is true
   app.listen(PORT, function() {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
@@ -43,5 +55,16 @@ db.sequelize.sync(syncOptions).then(function() {
     );
   });
 });
+
+// project starter code
+// db.sequelize.sync(syncOptions).then(function() {
+//   app.listen(PORT, function() {
+//     console.log(
+//       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+//       PORT,
+//       PORT
+//     );
+//   });
+// });
 
 module.exports = app;
