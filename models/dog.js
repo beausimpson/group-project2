@@ -7,6 +7,10 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
+    dogBreed: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     dogPark: {
       type: DataTypes.STRING,
       allowNull: false,
