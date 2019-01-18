@@ -35,7 +35,7 @@ if (process.env.NODE_ENV === "test") {
 
 // dev vs prod sequelize code
 //setup dev environment
-var isDev = process.env.NODE_ENV.trim() === "development";
+var isDev = process.env.NODE_ENV === "development";
 if (isDev) {
   //checks to see whether we set our node environment to development
   require("dotenv").config(); //grab local copy of env vars
