@@ -1,4 +1,4 @@
-$("#check-in-btn").on("click", function(event) {
+$("#check-in-btn").on("click", function (event) {
   event.preventDefault();
 
   var addDog = {
@@ -17,8 +17,24 @@ $("#check-in-btn").on("click", function(event) {
   $.ajax("/api/dogs", {
     type: "POST",
     data: addDog
-  }).then(function() {
+  }).then(function () {
     console.log("added dog to database");
     // location.reload();
   });
 });
+
+
+$('#breedSelect').change(function () {
+  var value = $(this).val();
+  var query = "https://dog.ceo/api/breed/" + value + "/images/random ";
+  $.get(query, function (data) {
+    console.log(data);
+    var image = data.message;
+    $('#dogPic').html(`<img style="height: auto; width: auto; margin: auto;
+   display: block;" src=${image}>`);
+  })
+
+})
+
+
+$("select").formSelect();
