@@ -22,5 +22,3 @@ $("#check-in-btn").on("click", function(event) {
     // location.reload();
   });
 });
-
-$("select").formSelect();
