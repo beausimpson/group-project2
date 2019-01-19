@@ -5,8 +5,9 @@
 h1, h2 {
   color: red;
   font-family: 'Fredoka One';
-  font-size: 32px;
+  font-size: 30px;
   display: block;
+  text-align: center
   
 }
 

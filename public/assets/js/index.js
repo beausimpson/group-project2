@@ -24,7 +24,7 @@ $("#check-in-btn").on("click", function (event) {
 });
 
 
-$('#breedSelect').change(function () {
+$('#dogBreed').change(function (event) {
   var value = $(this).val();
   var query = "https://dog.ceo/api/breed/" + value + "/images/random ";
   $.get(query, function (data) {
