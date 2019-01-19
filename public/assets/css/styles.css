@@ -5,9 +5,10 @@
 h1, h2 {
   color: red;
   font-family: 'Fredoka One';
-  font-size: 32px;
+  font-size: 30px;
   display: block;
-  margin: 2.3733333333rem 5rem 0;
+  text-align: center
+  
 }
 
 /* map div */
