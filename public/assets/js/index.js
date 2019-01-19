@@ -24,13 +24,14 @@ $("#check-in-btn").on("click", function (event) {
 });
 
 
-$('#breedSelect').change(function () {
+$("#dogBreed").change(function (event) {
+  event.preventDefault();
   var value = $(this).val();
   var query = "https://dog.ceo/api/breed/" + value + "/images/random ";
   $.get(query, function (data) {
     console.log(data);
     var image = data.message;
-    $('#dogPic').html(`<img style="height: auto; width: auto; margin: auto;
+    $('#dogPic').html(`<img style="height: auto; width: auto; margin: auto; 
    display: block;" src=${image}>`);
   })
 

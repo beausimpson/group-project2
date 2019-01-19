@@ -21,7 +21,7 @@ describe("GET /api/dogs", function() {
     // Add some examples to the db to test with
     db.Dog.bulkCreate([
       { dogName: "Cooley", dogBreed: "pug", dogPark: "Fort Woof" },
-      { dogName: "Diesel", dogBreed: "pug", dogPark: "Z Boaz Dog Park" }
+      { dogName: "Diesel", dogBreed: "pug", dogPark: "Z Bonz Dog Park" }
     ]).then(function() {
       // Request the route that returns all examples
       request.get("/api/dogs").end(function(err, res) {
@@ -51,7 +51,7 @@ describe("GET /api/dogs", function() {
           .that.includes({
             dogName: "Diesel",
             dogBreed: "pug",
-            dogPark: "Z Boaz Dog Park"
+            dogPark: "Z Bonz Dog Park"
           });
 
         // The `done` function is used to end any asynchronous tests
