@@ -164,13 +164,16 @@
   <div id="dogPic">
   </div>
 </div>
-
-</div>
 <div id="map-div">
-  <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+  <input id="pac-input" class="controls" type="text" placeholder="Dog Parks" value="Dog Parks">
   <div id="map"></div>
-</div
+</div>
 
 <script src="/assets/js/index.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5muag1ds-xwRVNJQMm4cp2JAwVaDrODk&libraries=places&callback=initAutocomplete"
+<script src="/assets/js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=" + process.env.GOOGLE_API + "&libraries=places&callback=initAutocomplete"
   async defer></script>
+
+  {{!-- <script>
+    src="https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=dog%20park&inputtype=textquery&fields=photos,formatted_address,name&key=AIzaSyC5muag1ds-xwRVNJQMm4cp2JAwVaDrODk"
+  </script> --}}
