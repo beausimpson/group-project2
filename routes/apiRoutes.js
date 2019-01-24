@@ -7,6 +7,12 @@ module.exports = function(app) {
       res.json(result);
     });
   });
+  app.post('/api/findDogs', function(req,res){
+    db.Dog.findAll({where: {dogPark: req.body.name }})
+    .then(function(result){
+      res.send(result)
+    })
+  })
 
   // Create a new example
   app.post("/api/dogs", function(req, res) {
