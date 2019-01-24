@@ -49,7 +49,7 @@ $('#search').on('click', function(){
   $.post('/api/findDogs', search, function(results){
     console.log(results);
     results.forEach(dog => {
-      $('#parkAttendees').append(`<div>Name: ${dog.dogName} Breed: ${dog.dogBreed}</div>`)
+      $('#parkAttendees').append(`<tr><td>${dog.dogName}<td>${dog.dogBreed}</td></tr>`)
     })
   })
 })

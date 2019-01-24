@@ -186,7 +186,17 @@
   <button class="btn waves-effect waves-light" id="search" name="action">Search
     <i class="material-icons right">send</i>
   </button>
-  <div id="parkAttendees"></div>
+  <div>
+    <table class="center responsive-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Breed</th>
+        </tr>
+        <tbody id="parkAttendees"></tbody>
+      </thead>
+    </table>
+  </div>
 </div>
 
 
@@ -203,8 +213,4 @@
 <script src="/assets/js/map.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5muag1ds-xwRVNJQMm4cp2JAwVaDrODk&libraries=places&callback=initAutocomplete"
   async defer></script>
-
-{{!--
-<script>
-  src = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=dog%20park&inputtype=textquery&fields=photos,formatted_address,name&key=AIzaSyC5muag1ds-xwRVNJQMm4cp2JAwVaDrODk"
-</script> --}}
+  
