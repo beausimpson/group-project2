@@ -11,6 +11,11 @@ h1, h2 {
   
 }
 
+.promo-caption {
+  font-family: 'Dokdo', cursive;
+  font-size: 25px;
+}
+
 /* map div */
 #map-div {
   height: 500px;
