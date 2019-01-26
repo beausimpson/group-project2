@@ -29,7 +29,7 @@ $("#dogBreed").change(function (event) {
   $.get(query, function (data) {
     console.log(data);
     var image = data.message;
-    $("#dogPic").html(`<img style="height: auto; width: auto; margin: auto; 
+    $("#dogPic").html(`<img style="height: auto; width: 100%; margin: auto; 
    display: block;" src=${image}>`);
   })
 
@@ -39,7 +39,7 @@ $("#dogBreed").change(function (event) {
 $("select").formSelect();
 
 $('#search').on('click', function(){
-  alert('search works')
+  //alert('search works')
   var search = {
     name: $('#parkName').val()
   }
